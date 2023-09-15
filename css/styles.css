@@ -1059,6 +1059,7 @@ img {
   border: none;
   border-radius: 50%;
   outline: none;
+  transition: background-color var(--tran-fast);
 }
 @media (min-width: 768px) {
   .menu-toggle {
@@ -1068,6 +1069,10 @@ img {
 .menu-toggle:hover,
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
+}
+.menu-toggle:hover > svg,
+.menu-toggle:focus > svg {
+  fill: var(--primary-brand);
 }
 .menu-container {
   position: fixed;
@@ -1100,6 +1105,10 @@ img {
   letter-spacing: 0.72px;
   text-transform: capitalize;
 }
+.menu-li > a:hover,
+.menu-li > a:focus {
+  color: var(--primary-brand);
+}
 .current-el {
   color: var(--primary-brand);
 }
@@ -1110,6 +1119,11 @@ img {
 .address-menu-ul > li {
   padding: 20px 0;
 }
+.address-menu-ul > li > a:hover,
+.address-menu-ul > li > a:focus {
+  color: var(--primary-brand);
+}
+
 .address-menu-ul > li:first-child > a {
   padding: 0;
   color: var(--primary-brand);
