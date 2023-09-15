@@ -57,6 +57,16 @@
             </li>
           </ul>
         </address>
+
+        <button
+          class="menu-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon" width="30" height="18">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -71,7 +81,7 @@
         </div>
       </section>
 
-      <!-- Section 2 - Properties -->↩
+      <!-- Section 2 - Properties -->
       <section class="section-prop">
         <div class="container">
           <h2 class="properties-header visually-hidden" hidden>Properties</h2>
@@ -546,6 +556,74 @@
       </div>
     </div>
 
+    <!-- Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="modal-btn-icon" width="12" height="12">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="menu-ul list">
+        <li class="menu-li">
+          <a class="site-nav-a link current-el" href="./index.html">Studio</a>
+        </li>
+        <li class="menu-li">
+          <a class="site-nav-a link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="menu-li">
+          <a class="site-nav-a link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <address class="address-menu">
+        <ul class="address-menu-ul list">
+          <li class="address-li">
+            <a class="address-a link" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="address-li">
+            <a class="address-a link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+
+      <ul class="flex-center list team-icons-ul menu-icons-list">
+        <li class="team-svg-wrapper">
+          <a href="" class="flex-center team-icon-link">
+            <svg class="team-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-svg-wrapper">
+          <a href="" class="flex-center team-icon-link">
+            <svg class="team-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-svg-wrapper">
+          <a href="" class="flex-center team-icon-link">
+            <svg class="team-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-svg-wrapper">
+          <a href="" class="flex-center team-icon-link">
+            <svg class="team-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
