@@ -198,26 +198,29 @@ img {
   color: var(--pressed-state);
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+  .address-ul {
+    gap: 12px;
+    flex-direction: column;
+  }
+  .address-li {
+    padding: 0;
+  }
+  .address-a {
+    padding: 0;
+    font-size: 12px;
+  }
+}
+
 /* Main */
 /* Section 1 - Hero  */
 .section-hero {
-  padding: 188px 0;
+  padding: 112px 0;
   min-width: 428px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-@media only screen and (min-width: 768px) {
-  .section-hero {
-    min-width: 768px;
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .section-hero {
-    min-width: 1158px;
-  }
-}
-
 .hero {
   text-align: center;
   background-color: var(--dark);
@@ -225,7 +228,33 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero.jpg);
+    url(../images/hero-mob.jpeg);
+}
+
+@media only screen and (min-width: 768px) {
+  .section-hero {
+    min-width: 768px;
+  }
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-tab.jpeg);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-hero {
+    padding: 188px 0;
+    min-width: 1158px;
+  }
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero.jpg);
+  }
 }
 
 .hero-title {
@@ -482,7 +511,12 @@ img {
 
 /* Section 2 - Properties  */
 .section-prop {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+  .section-prop {
+    padding: 120px 0;
+  }
 }
 .properties-ul {
   display: flex;
@@ -575,8 +609,13 @@ img {
 
 /* Section 4 - Team  */
 .section-team {
-  padding: 120px 0;
+  padding: 96px 0;
   background-color: var(--light);
+}
+@media only screen and (min-width: 1158px) {
+  .section-team {
+    padding: 120px 0;
+  }
 }
 .team-header {
   margin-bottom: 72px;
@@ -668,7 +707,12 @@ img {
 
 /* Customers */
 .section-customers {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+  .section-customers {
+    padding: 120px 0;
+  }
 }
 .customers-header {
   margin-bottom: 72px;
