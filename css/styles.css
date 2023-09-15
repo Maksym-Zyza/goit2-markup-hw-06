@@ -803,10 +803,17 @@ img {
 }
 .portfolio-nav-ul {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-nav-ul {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 .nav-btn {
   padding: 12px 24px;
@@ -840,7 +847,17 @@ img {
   row-gap: 48px;
 }
 .card-li {
-  width: calc((100% - 48px) / 3);
+  width: calc((100% - 0px) / 1);
+}
+@media only screen and (min-width: 768px) {
+  .card-li {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .card-li {
+    width: calc((100% - 48px) / 3);
+  }
 }
 .card-a {
   display: block;
@@ -1080,7 +1097,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 80px 40px 40px 40px;
+  padding: 80px 10px 40px 40px;
   background-color: var(--modal-background);
   z-index: 999;
 
