@@ -47,8 +47,8 @@ button {
 
 img {
   display: block;
-  width: 100%;
-  /* ?? */
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -658,6 +658,7 @@ img {
   gap: 24px;
   flex-direction: column;
   align-items: center;
+  padding: 0 18px;
 }
 @media only screen and (min-width: 768px) {
   .team-container {
