@@ -67,7 +67,7 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 584px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -115,6 +115,8 @@ img {
 .header-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-width: 74%;
 }
 .nav-ul {
   display: flex;
@@ -123,6 +125,11 @@ img {
 @media only screen and (max-width: 767px) {
   .nav-ul {
     display: none;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .header-nav {
+    min-width: 42%;
   }
 }
 .nav-li {
@@ -152,7 +159,7 @@ img {
   color: var(--primary-brand);
 }
 .logo-web {
-  margin-right: 76px;
+  /* margin-right: 76px; */
   color: var(--primary-brand);
 }
 .logo-studio-light {
@@ -295,8 +302,8 @@ img {
   }
 }
 @media only screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+  (min-width: 768px) and (min-resolution: 192dpi),
+  (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -306,8 +313,8 @@ img {
   }
 }
 @media only screen and (min-width: 1158px) and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+  (min-width: 1158px) and (min-resolution: 192dpi),
+  (min-width: 1158px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -416,6 +423,7 @@ img {
 .modal-content {
   display: flex;
   flex-direction: column;
+  max-width: 95%;
 }
 .modal-p {
   margin-bottom: 16px;
@@ -486,7 +494,7 @@ img {
 }
 .contact-comment-text {
   padding: 8px 16px;
-  width: 360px;
+  max-width: 360px;
   height: 120px;
   font-size: 12px;
   line-height: 1.17;
@@ -581,7 +589,8 @@ img {
 .properties-ul {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 72px;
 }
 .prop-li {
   flex-basis: calc((100% - 3 * 24px) / 4);
@@ -598,6 +607,7 @@ img {
 @media only screen and (min-width: 1158px) {
   .properties-ul {
     flex-wrap: nowrap;
+    gap: 24px;
   }
 }
 
@@ -688,16 +698,13 @@ img {
 }
 .team-ul {
   display: flex;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 72px;
   flex-direction: column;
   align-items: center;
   padding: 0 18px;
 }
 @media only screen and (min-width: 768px) {
-  .team-container {
-    padding: 0 90px;
-  }
-
   .team-ul {
     flex-direction: row;
     flex-wrap: wrap;
@@ -709,6 +716,7 @@ img {
   }
   .team-ul {
     flex-wrap: nowrap;
+    gap: 24px;
   }
 }
 .team-li {
@@ -787,7 +795,8 @@ img {
 .customers-ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  column-gap: 16px;
+  row-gap: 72px;
 }
 .customers-li {
   height: 88px;
@@ -971,6 +980,7 @@ img {
 @media only screen and (min-width: 1158px) {
   .footer-wrapper {
     flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -984,20 +994,12 @@ img {
 }
 @media only screen and (min-width: 768px) and (max-width: 1158px) {
   .footer-wrapper > div:first-child {
-    margin-left: 108px;
     margin-right: 24px;
     margin-bottom: 72px;
-  }
-  .footer-wrapper > div:nth-child(3) {
-    margin-left: 108px;
   }
   .footer-wrapper > div:nth-child(3) .footer-btn {
     margin: 0;
   }
-}
-
-.footer-logo-block {
-  margin-right: 120px;
 }
 .footer-a {
   display: inline-block;
@@ -1032,9 +1034,9 @@ img {
 .footer-link:focus {
   background-color: var(--success);
 }
-.footer-form-block {
+/* .footer-form-block {
   margin-left: 80px;
-}
+} */
 .footer-form {
   display: flex;
   flex-direction: row;
@@ -1149,8 +1151,20 @@ img {
   color: #fff;
 }
 
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.height-all {
+  height: 100%;
+}
+.menu-li,
+.menu-li > a {
+  padding: 0;
+}
 .menu-li {
-  padding: 20px 0;
+  padding-bottom: 40px;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
@@ -1165,11 +1179,10 @@ img {
   color: var(--primary-brand);
 }
 .address-menu {
-  margin-top: 284px;
   text-align: center;
 }
 .address-menu-ul > li {
-  padding: 20px 0;
+  padding: 15px 0;
 }
 .address-menu-ul > li > a:hover,
 .address-menu-ul > li > a:focus {
@@ -1196,5 +1209,10 @@ img {
 }
 .menu-icons-list {
   margin-top: 48px;
-  gap: 56px;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 410px) {
+  .address-menu-ul > li:first-child > a {
+    font-size: 26px;
+  }
 }
